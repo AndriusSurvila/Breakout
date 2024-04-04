@@ -5,7 +5,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static int lives = 0;
+    public static int lives = 1;
     public static int score = 0;
 
     public TMP_Text livesText;
@@ -16,6 +16,13 @@ public class GameManager : MonoBehaviour
 
     public AudioClip winSound;
     public AudioClip loseSound;
+
+    private void Start()
+    {
+
+        lives = 1;
+        score = 0;
+    }
 
     private void Update()
     {

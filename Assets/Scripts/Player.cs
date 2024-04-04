@@ -18,11 +18,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, 0);
-        //AudioSystem.Play(moveSound);
-        //if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-        //{
-            
-        //}
     }
 
     private void OnCollisionEnter2D(Collision2D other)
