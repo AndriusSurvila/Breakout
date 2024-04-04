@@ -5,7 +5,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static int lives = 3;
+    public static int lives = 0;
     public static int score = 0;
 
     public TMP_Text livesText;
@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject winScreen;
     public GameObject loseScreen;
+
+    public AudioClip winSound;
+    public AudioClip loseSound;
 
     private void Update()
     {
@@ -22,12 +25,14 @@ public class GameManager : MonoBehaviour
         if (lives <= 0)
         {
             loseScreen.SetActive(true);
+            AudioSystem.Play(loseSound);
             enabled = false;
         }
 
         if (FindObjectsOfType<Brick>().Length < 1)
         {
             winScreen.SetActive(true);
+            AudioSystem.Play(winSound);
             enabled = false;
         }
     }
