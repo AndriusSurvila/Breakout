@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
     Rigidbody2D rb;
     public float speed = 5f;
+    public Transform spawnPoint;
 
     void Start()
     {
@@ -24,5 +25,12 @@ public class Ball : MonoBehaviour
         {
             brick.Damage();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        GameManager.lives--;
+        transform.position = spawnPoint.position;
+        rb.velocity = Vector2.up;
     }
 }
