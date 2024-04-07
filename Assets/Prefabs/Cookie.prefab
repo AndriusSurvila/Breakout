@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c680e31f2d220364baa0af45b6a6c064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
+  hp: 1
   destroySound: {fileID: 8300000, guid: caf75aaef4c320c42bfc78fbb790bfbc, type: 3}
   boomSound: {fileID: 8300000, guid: d85ef5b1462728d4e92846f4c448c2fc, type: 3}
+  explosionParticles: {fileID: 3995940964130297852, guid: 8dd1cdf931288394ab85b0512657d919, type: 3}
