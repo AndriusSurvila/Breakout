@@ -5,7 +5,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static int lives = 1;
+    public static int lives = 3;
     public static int score = 0;
 
     public TMP_Text livesText;
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
 
-        lives = 1;
+        lives = 3;
         score = 0;
     }
 

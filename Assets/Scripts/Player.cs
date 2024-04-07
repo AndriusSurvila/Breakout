@@ -22,9 +22,12 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        var offset = transform.position - other.transform.position;
+
         if (other.gameObject.name == "Ball")
         {
             AudioSystem.Play(shootSound);
+            other.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-offset.x, 1);
         }
     }
 
